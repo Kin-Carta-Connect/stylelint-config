@@ -49,7 +49,7 @@ describe("flags warnings with invalid css", () => {
 	it("correct warning text", () => {
 		return result.then(data =>
 			expect(data.results[0].warnings[0].text).toBe(
-				'Unexpected unknown type selector "madeup" (selector-type-no-unknown)'
+				'Expected "#fff" to be "#FFF" (color-hex-case)'
 			)
 		);
 	});
@@ -57,7 +57,7 @@ describe("flags warnings with invalid css", () => {
 	it("correct rule flagged", () => {
 		return result.then(data =>
 			expect(data.results[0].warnings[0].rule).toBe(
-				"selector-type-no-unknown"
+				"color-hex-case"
 			)
 		);
 	});
@@ -70,13 +70,13 @@ describe("flags warnings with invalid css", () => {
 
 	it("correct line number", () => {
 		return result.then(data =>
-			expect(data.results[0].warnings[0].line).toBe(1)
+			expect(data.results[0].warnings[0].line).toBe(3)
 		);
 	});
 
 	it("correct column number", () => {
 		return result.then(data =>
-			expect(data.results[0].warnings[0].column).toBe(1)
+			expect(data.results[0].warnings[0].column).toBe(10)
 		);
 	});
 });
