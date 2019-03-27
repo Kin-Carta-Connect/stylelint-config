@@ -1,6 +1,6 @@
 # AR CSS / Sass Styleguide
 
-*A mostly reasonable approach to CSS and Sass*
+_A mostly reasonable approach to CSS and Sass_
 
 ## Table of Contents
 
@@ -32,8 +32,8 @@ A “rule declaration” is the name given to a selector (or a group of selector
 
 ```css
 .listing {
-  font-size: 18px;
-  line-height: 1.2;
+	font-size: 18px;
+	line-height: 1.2;
 }
 ```
 
@@ -43,11 +43,11 @@ In a rule declaration, “selectors” are the bits that determine which element
 
 ```css
 .my-element-class {
-  /* ... */
+	/* ... */
 }
 
 [aria-hidden] {
-  /* ... */
+	/* ... */
 }
 ```
 
@@ -56,9 +56,10 @@ In a rule declaration, “selectors” are the bits that determine which element
 Finally, properties are what give the selected elements of a rule declaration their style. Properties are key-value pairs, and a rule declaration can contain one or more property declarations. Property declarations look like this:
 
 ```css
-/* some selector */ {
-  background: #f1f1f1;
-  color: #333;
+/* some selector */
+ {
+	background: #f1f1f1;
+	color: #333;
 }
 ```
 
@@ -68,26 +69,29 @@ Finally, properties are what give the selected elements of a rule declaration th
 
 ### Formatting
 
-* Use tabs for indentation.
-* use kebab-case in class names. 
-* Do not use ID selectors.
-* When using multiple selectors in a rule declaration, give each selector its own line.
-* Put a space before the opening brace `{` in rule declarations.
-* In properties, put a space after, but not before, the `:` character.
-* Put closing braces `}` of rule declarations on a new line.
-* Put blank lines between rule declarations.
+-   Use tabs for indentation.
+-   use kebab-case in class names.
+-   Do not use ID selectors.
+-   When using multiple selectors in a rule declaration, give each selector its own line.
+-   Put a space before the opening brace `{` in rule declarations.
+-   In properties, put a space after, but not before, the `:` character.
+-   Put closing braces `}` of rule declarations on a new line.
+-   Put blank lines between rule declarations.
 
 **Bad**
 
 ```css
-.avatar{
-    border-radius:50%;
-    border:2px solid white; }
-.no, .nope, .not_good {
-    // ...
+.avatar {
+	border-radius: 50%;
+	border: 2px solid white;
+}
+.no,
+.nope,
+.not_good {
+	// ...
 }
 #lol-no {
-  // ...
+	// ...
 }
 ```
 
@@ -95,47 +99,47 @@ Finally, properties are what give the selected elements of a rule declaration th
 
 ```css
 .avatar {
-  border-radius: 50%;
-  border: 2px solid white;
+	border-radius: 50%;
+	border: 2px solid white;
 }
 
 .one,
 .selector,
 .per-line {
-  // ...
+	// ...
 }
 ```
 
 ### Comments
 
-* Prefer line comments (`//`) to block comments.
-* Prefer comments on their own line. Avoid end-of-line comments.
-* Write detailed comments for code that isn't self-documenting:
-  - Uses of z-index
-  - Compatibility or browser-specific hacks
+-   Prefer line comments (`//`) to block comments.
+-   Prefer comments on their own line. Avoid end-of-line comments.
+-   Write detailed comments for code that isn't self-documenting:
+    -   Uses of z-index
+    -   Compatibility or browser-specific hacks
 
 ### Units and Numbers
 
-* Zeros - Numbers should display leading zeros before a decimal value less than one. Never display trailing zeros.
-* Units - A 0 value should never ever have a unit.
+-   Zeros - Numbers should display leading zeros before a decimal value less than one. Never display trailing zeros.
+-   Units - A 0 value should never ever have a unit.
 
 ### BEM
 
-Reccomend/require use of BEM for these reasons:
+Recommend/require use of BEM for these reasons:
 
-  * It helps create clear, strict relationships between CSS and HTML
-  * It helps us create reusable, composable components
-  * It allows for less nesting and lower specificity
-  * It helps in building scalable stylesheets
+-   It helps create clear, strict relationships between CSS and HTML
+-   It helps us create reusable, composable components
+-   It allows for less nesting and lower specificity
+-   It helps in building scalable stylesheets
 
 **BEM**, or “Block-Element-Modifier”, is a _naming convention_ for classes in HTML and CSS. It was originally developed by Yandex with large codebases and scalability in mind, and can serve as a solid set of guidelines for implementing OOCSS.
 
-  * CSS Trick's [BEM 101](https://css-tricks.com/bem-101/)
-  * Harry Roberts' [introduction to BEM](http://csswizardry.com/2013/01/mindbemding-getting-your-head-round-bem-syntax/)
+-   CSS Trick's [BEM 101](https://css-tricks.com/bem-101/)
+-   Harry Roberts' [introduction to BEM](http://csswizardry.com/2013/01/mindbemding-getting-your-head-round-bem-syntax/)
 
 We recommend a variant of BEM with camelCasing “blocks”, which works particularly well when combined with components (e.g. React). Underscores and dashes are still used for modifiers and children.
 
-However to avoid HTML class lists becoming overly bloated modifiers sould be stand alone nested classes.  This also simplifies the process of manipulating madifyers using javascript.  Suggest that the use double dash prefix to denote modifer is maintained. 
+However to avoid HTML class lists becoming overly bloated modifiers sould be stand alone nested classes. This also simplifies the process of manipulating madifyers using javascript. Suggest that the use double dash prefix to denote modifer is maintained.
 
 This methodology and it's benefits aredescribed described in https://css-tricks.com/abem-useful-adaptation-bem/
 
@@ -144,42 +148,45 @@ This methodology and it's benefits aredescribed described in https://css-tricks.
 ```jsx
 // ListingCard.jsx
 function ListingCard() {
-  return (
-    <article class="listing-card --featured">
+	return (
+		<article class="listing-card --featured">
+			<h1 class="listing-card__title">
+				Adorable 2BR in the sunny Mission
+			</h1>
 
-      <h1 class="listing-card__title">Adorable 2BR in the sunny Mission</h1>
-
-      <div class="listing-card__content">
-        <p>Vestibulum id ligula porta felis euismod semper.</p>
-      </div>
-
-    </article>
-  );
+			<div class="listing-card__content">
+				<p>Vestibulum id ligula porta felis euismod semper.</p>
+			</div>
+		</article>
+	);
 }
 ```
 
 ```css
 /* ListingCard.css */
-.listing-card { }
-.listing-card .--featured { }
-.listing-card__title { }
-.listing-card__content { }
+.listing-card {
+}
+.listing-card .--featured {
+}
+.listing-card__title {
+}
+.listing-card__content {
+}
 ```
 
-  * `.listing-card` is the “block” and represents the higher-level component
-  * `.listing-card__title` is an “element” and represents a descendant of `.listing-card` that helps compose the block as a whole.
-  * `.--featured` is a “modifier” and represents a different state or variation on the `.listing-card` block.
+-   `.listing-card` is the “block” and represents the higher-level component
+-   `.listing-card__title` is an “element” and represents a descendant of `.listing-card` that helps compose the block as a whole.
+-   `.--featured` is a “modifier” and represents a different state or variation on the `.listing-card` block.
 
 ### ID selectors
 
 While it is possible to select elements by ID in CSS, it should generally be considered an anti-pattern. ID selectors introduce an unnecessarily high level of [specificity](https://developer.mozilla.org/en-US/docs/Web/CSS/Specificity) to your rule declarations, and they are not reusable.
 
-
 ### JavaScript hooks
 
 Avoid binding to the same class in both your CSS and JavaScript. Conflating the two often leads to, at a minimum, time wasted during refactoring when a developer must cross-reference each class they are changing, and at its worst, developers being afraid to make changes for fear of breaking functionality.
 
-Rather than binding with a class bind use data atributes. If classes are JavaScript-specific (eg, are added to the block or element by js), they should be prefixed with `.js-`  as these will often be modifiers the class names would be `.--js-Modifier`  
+Rather than binding with a class bind use data atributes. If classes are JavaScript-specific (eg, are added to the block or element by js), they should be prefixed with `.js-` as these will often be modifiers the class names would be `.--js-Modifier`
 
 ```html
 <button class="btn btn-primary --js-requestToBook">Request to Book</button>
@@ -193,7 +200,7 @@ Use `0` instead of `none` to specify that a style has no border.
 
 ```css
 .foo {
-  border: none;
+	border: none;
 }
 ```
 
@@ -201,17 +208,18 @@ Use `0` instead of `none` to specify that a style has no border.
 
 ```css
 .foo {
-  border: 0;
+	border: 0;
 }
 ```
+
 **[⬆ back to top](#table-of-contents)**
 
 ## Sass
 
 ### Syntax
 
-* Use the `.scss` syntax, never the original `.sass` syntax
-* Order your regular CSS and `@include` declarations logically (see below)
+-   Use the `.scss` syntax, never the original `.sass` syntax
+-   Order your regular CSS and `@include` declarations logically (see below)
 
 ### Ordering of property declarations
 
@@ -219,43 +227,39 @@ Use `0` instead of `none` to specify that a style has no border.
 
     There is not a set order for properties within selectors, however consistancy should be maintained where possible. @include declarations maybe placed wherever in the order they make the most sense. (eg. a mixin for a font may be included at the same point you would include a normal declaration)
 
-
-2. Nested selectors
+2) Nested selectors
 
     Nested selectors, go last, and nothing goes after them. Add whitespace between your rule declarations and nested selectors, as well as between adjacent nested selectors. Apply the same guidelines as above to your nested selectors.
 
     ```scss
     .btn {
-      background: green;
-      font-weight: bold;
-      @include transition(background 0.5s ease);
+    	background: green;
+    	font-weight: bold;
+    	@include transition(background 0.5s ease);
 
-      .icon {
-        margin-right: 10px;
-      }
+    	.icon {
+    		margin-right: 10px;
+    	}
     }
     ```
 
-3. Nested selectors in Sass
+3) Nested selectors in Sass
 
-  To make naming selectors and refactoring a component cleaner assign the root component name to a variable using the & selector. 
+To make naming selectors and refactoring a component cleaner assign the root component name to a variable using the & selector.
 
-  ```scss
-  .component {
-    $root: &; // Assign the component class to a variable. 
-  
-    //modifyer for component
-    &.--variant {
+```scss
+.component {
+	$root: &; // Assign the component class to a variable.
 
-      // Here, we use $root to get the correct scope for the class name
-      #{ $root }__child-element {
-        background: rebeccapurple;
-      }
-    }
-  }
-
-  ```
-
+	//modifyer for component
+	&.--variant {
+		// Here, we use $root to get the correct scope for the class name
+		#{ $root }__child-element {
+			background: rebeccapurple;
+		}
+	}
+}
+```
 
 ### Variables
 
@@ -275,20 +279,19 @@ Mixins should be used to DRY up your code, add clarity, or abstract complexity--
 
 ```scss
 .page-container {
-  .content {
-    .profile {
-      // STOP!
-    }
-  }
+	.content {
+		.profile {
+			// STOP!
+		}
+	}
 }
 ```
 
 When selectors become this long, you're likely writing CSS that is:
 
-* Strongly coupled to the HTML (fragile) *—OR—*
-* Overly specific (powerful) *—OR—*
-* Not reusable
-
+-   Strongly coupled to the HTML (fragile) _—OR—_
+-   Overly specific (powerful) _—OR—_
+-   Not reusable
 
 Again: **never nest ID selectors!**
 

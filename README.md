@@ -9,7 +9,7 @@ Use it as is or as a foundation for your own config. It will mainly be used with
 ## Installation
 
 ```bash
-npm install -D {module name}
+npm install -D {module name} TODO: Add the name here once we decide on hosting.
 ```
 
 ## Usage
@@ -71,5 +71,17 @@ For example, to change the at-rule-no-unknown rule to use its ignoreAtRules opti
 ### Editors
 
 -   [WebStorm](https://blog.jetbrains.com/webstorm/2016/09/webstorm-2016-3-eap-163-4830-stylelint-usages-for-default-exports-and-more/): Version 2016.3 onwards has built-in support for stylelint.
+
+### Find stylelint rules
+
+Find stylelint rules that are not configured in your stylelint config. This is useful to see what else is new and what is deprecated or updated.
+
+Running this in your root folder will show the list.
+
+```
+npx stylelint-find-rules
+```
+
+More info here https://github.com/alexilyaev/stylelint-find-rules
 
 ## [Changelog](CHANGELOG.md)
