@@ -62,5 +62,29 @@ module.exports = {
       		"ignore": ["after-comment"],
       		"ignoreAtRules": ["else"]
 		}
-	]
+	],
+	"at-rule-name-case": "lower",
+	"at-rule-name-newline-after": "always-multi-line",
+	"at-rule-name-space-after": "always-single-line",
+	"at-rule-semicolon-newline-after": "always",
+	"at-rule-semicolon-space-before": "never",
+	"comment-empty-line-before": [
+		"always",
+		{
+			except: ["first-nested"],
+			ignore: ["after-comment", "stylelint-commands"]
+		}
+	],
+	"indentation": "tab",
+	"max-empty-lines": 2,
+	"max-line-length": [
+		156,
+		{
+			"ignore": ["comments"],
+			"ignorePattern": ["/https?:\/\/[0-9,a-z]*.*/"]
+		}
+	],
+	"no-eol-whitespace": true,
+	"no-missing-end-of-source-newline": true,
+	"no-empty-first-line": true
 };
