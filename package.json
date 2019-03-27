@@ -14,11 +14,16 @@
   },
   "main": "index.js",
   "files": [
+    "rules/**/*.js",
     "index.js"
   ],
   "scripts": {
     "test": "jest",
-    "watch": "jest --watch"
+    "watch": "jest --watch",
+    "release": "np --no-cleanup --no-yarn"
+  },
+  "publishConfig": {
+    "access": "public"
   },
   "dependencies": {
     "stylelint-no-unsupported-browser-features": "^3.0.2",
@@ -27,9 +32,9 @@
   "devDependencies": {
     "eslint": "^5.14.1",
     "jest": "^24.1.0",
-    "stylelint": "^9.0.0"
+    "np": "*"
   },
   "peerDependencies": {
-    "stylelint": "^9.0.0"
+    "stylelint": "^9.10.1"
   }
 }
