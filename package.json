@@ -1,12 +1,12 @@
 {
-  "name": "css-styleguide",
+  "name": "@amazerealise/css-styleguide",
   "version": "0.1.0",
   "description": "AmazeRealise Stylelint config",
   "keywords": [
     "stylelint",
     "stylelint-config"
   ],
-  "author": "Radu Micu, Bee Flaherty",
+  "author": "Radu Micu, Bee Flaherty, AmazeRealise",
   "license": "MIT",
   "repository": {
     "type": "git",
@@ -32,9 +32,10 @@
   "devDependencies": {
     "eslint": "^5.16.0",
     "jest": "^24.8.0",
-    "np": "*"
+    "np": "*",
+    "stylelint": "^10.1.0"
   },
   "peerDependencies": {
-    "stylelint": "^9.10.1"
+    "stylelint": "^10.1.0"
   }
 }
