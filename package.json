@@ -1,0 +1,40 @@
+{
+  "name": "css-styleguide",
+  "version": "0.1.0",
+  "description": "AmazeRealise Stylelint config",
+  "keywords": [
+    "stylelint",
+    "stylelint-config"
+  ],
+  "author": "Radu Micu, Bee Flaherty",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@gitlab.com/amazerealise-fe-group/css-styleguide.git"
+  },
+  "main": "index.js",
+  "files": [
+    "rules/**/*.js",
+    "index.js"
+  ],
+  "scripts": {
+    "test": "jest",
+    "watch": "jest --watch",
+    "release": "np --no-cleanup --no-yarn"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "dependencies": {
+    "stylelint-no-unsupported-browser-features": "^3.0.2",
+    "stylelint-scss": "^3.5.3"
+  },
+  "devDependencies": {
+    "eslint": "^5.14.1",
+    "jest": "^24.1.0",
+    "np": "*"
+  },
+  "peerDependencies": {
+    "stylelint": "^9.10.1"
+  }
+}
