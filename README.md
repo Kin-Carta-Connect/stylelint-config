@@ -9,7 +9,7 @@ Use it as is or as a foundation for your own config. It will mainly be used with
 ## Installation
 
 ```bash
-npm install -D {module name} TODO: Add the name here once we decide on hosting.
+npm install -D @amazerealise/stylelint-config
 ```
 
 ## Usage
@@ -18,22 +18,22 @@ If you've installed ar-stylelint-config locally within your project, just set yo
 
 ```bash
 {
-  "extends": "ar-stylelint-config"
+  "extends": "@amazerealise/stylelint-config"
 }
 ```
 
-If you've globally installed ar-stylelint-config using the -g flag, then you'll need to use the absolute path to ar-stylelint-config in your config e.g.
+If you've globally installed @amazerealise/stylelint-config using the -g flag, then you'll need to use the absolute path to @amazerealise/stylelint-config in your config e.g.
 
 ```bash
 {
-  "extends": "/absolute/path/to/ar-stylelint-config"
+  "extends": "/absolute/path/to/@amazerealise/stylelint-config"
 }
 ```
 
 You can also simply use the globally installed configuration name instead of the absolute path:
 
 {
-  "extends": "ar-stylelint-config"
+  "extends": "@amazerealise/stylelint-config"
 }
 
 ### Extending the config
@@ -44,7 +44,7 @@ For example, to change the at-rule-no-unknown rule to use its ignoreAtRules opti
 
 ```json
 {
-  "extends": "ar-stylelint-config",
+  "extends": "@amazerealise/stylelint-config",
   "rules": {
     "at-rule-no-unknown": [ true, {
       "ignoreAtRules": [

@@ -1,13 +1,15 @@
 {
-  "name": "@amazerealise/css-styleguide",
-  "version": "0.1.0",
-  "description": "AmazeRealise Stylelint config",
+  "name": "@amazerealise/stylelint-config",
+  "version": "0.0.0",
+  "description": "AmazeRealise Stylelint config.",
   "keywords": [
     "stylelint",
-    "stylelint-config"
+    "stylelint-config",
+    "amazerealise"
   ],
   "author": "Radu Micu, Bee Flaherty, AmazeRealise",
   "license": "MIT",
+  "homepage": "https://gitlab.com/amazerealise-fe-group/css-styleguide#readme",
   "repository": {
     "type": "git",
     "url": "git+ssh://git@gitlab.com/amazerealise-fe-group/css-styleguide.git"
