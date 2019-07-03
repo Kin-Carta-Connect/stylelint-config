@@ -7,7 +7,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [0.1.2]
 
-* Disable selector-class-pattern for now to fix #33 42c33096
+* Disable selector-class-pattern for now to fix FE Boilerplate Core [#33](https://gitlab.com/amazerealise-fe-group/fe-boilerplate/issues/33) 42c33096
 
 ## [0.1.1]
 
