@@ -35,9 +35,9 @@
     "eslint": "^5.16.0",
     "jest": "^24.8.0",
     "np": "*",
-    "stylelint": "^10.1.0"
+    "stylelint": "^13.8.0"
   },
   "peerDependencies": {
-    "stylelint": "^10.1.0"
+    "stylelint": "^13.8.0"
   }
 }
