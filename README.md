@@ -1,4 +1,4 @@
-# AR Stylelint config
+# K+C Stylelint config
 
 > The AR recommended shareable config for stylelint.
 
@@ -9,7 +9,7 @@ Use it as is or as a foundation for your own config. It will mainly be used with
 ## Installation
 
 ```bash
-npm install -D @amazerealise/stylelint-config
+npm install -D @kinandcarta/stylelint-config
 ```
 
 ## Usage
@@ -18,22 +18,22 @@ If you've installed ar-stylelint-config locally within your project, just set yo
 
 ```bash
 {
-  "extends": "@amazerealise/stylelint-config"
+  "extends": "@kinandcarta/stylelint-config"
 }
 ```
 
-If you've globally installed @amazerealise/stylelint-config using the -g flag, then you'll need to use the absolute path to @amazerealise/stylelint-config in your config e.g.
+If you've globally installed @kinandcarta/stylelint-config using the -g flag, then you'll need to use the absolute path to @kinandcarta/stylelint-config in your config e.g.
 
 ```bash
 {
-  "extends": "/absolute/path/to/@amazerealise/stylelint-config"
+  "extends": "/absolute/path/to/@kinandcarta/stylelint-config"
 }
 ```
 
 You can also simply use the globally installed configuration name instead of the absolute path:
 
 {
-  "extends": "@amazerealise/stylelint-config"
+  "extends": "@kinandcarta/stylelint-config"
 }
 
 ### Extending the config
@@ -44,7 +44,7 @@ For example, to change the at-rule-no-unknown rule to use its ignoreAtRules opti
 
 ```json
 {
-  "extends": "@amazerealise/stylelint-config",
+  "extends": "@kinandcarta/stylelint-config",
   "rules": {
     "at-rule-no-unknown": [ true, {
       "ignoreAtRules": [

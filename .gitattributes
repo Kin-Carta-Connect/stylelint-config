@@ -193,3 +193,6 @@ Procfile    text
 ## EXECUTABLES
 *.exe binary
 *.pyc binary
+
+# EDITORS
+.vscode

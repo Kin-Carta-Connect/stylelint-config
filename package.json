@@ -1,18 +1,18 @@
 {
-  "name": "@amazerealise/stylelint-config",
+  "name": "@kinandcarta/stylelint-config",
   "version": "0.1.2",
-  "description": "AmazeRealise shareable config for stylelint.",
+  "description": "Kin+Carta Stylelint Shareable Config",
   "keywords": [
     "stylelint",
     "stylelint-config",
-    "amazerealise"
+    "kinandcarta"
   ],
-  "author": "Radu Micu, Bee Flaherty, AmazeRealise",
+  "author": "Radu Micu, Kin+Carta",
   "license": "MIT",
-  "homepage": "https://gitlab.com/amazerealise-fe-group/stylelint-config#readme",
+  "homepage": "https://github.com/Kin-Carta-Connect/stylelint-config#readme",
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@gitlab.com/amazerealise-fe-group/stylelint-config.git"
+    "url": "git@github.com:Kin-Carta-Connect/stylelint-config.git"
   },
   "main": "index.js",
   "files": [
