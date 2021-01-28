@@ -1,3 +1,17 @@
+# Changelog
+
+All notable changes to this project will be documented in this file. See
+[Conventional Commits](https://conventionalcommits.org) for commit guidelines.
+
+This project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
+
+## [0.2.0](https://github.com/Kin-Carta-Connect/stylelint-config/compare/v0.1.2...v0.2.0) (2021-01-28)
+
+
+### Features
+
+* new sematic release flow ([5dbeb19](https://github.com/Kin-Carta-Connect/stylelint-config/commit/5dbeb1908c0a5222ad3af348a03ea6c9c220cf45))
+
 # Changelog [OLD PRE semantic-release]
 
 All notable changes to this project will be documented in this file.

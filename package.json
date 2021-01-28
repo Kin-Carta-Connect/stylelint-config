@@ -1,6 +1,6 @@
 {
   "name": "@kinandcarta/stylelint-config",
-  "version": "0.1.2",
+  "version": "0.2.0",
   "description": "Kin+Carta Stylelint Shareable Config",
   "keywords": [
     "stylelint",
@@ -14,8 +14,8 @@
     "type": "git",
     "url": "git@github.com:Kin-Carta-Connect/stylelint-config.git"
   },
-  "engines" : {
-    "node" : ">=12"
+  "engines": {
+    "node": ">=12"
   },
   "main": "index.js",
   "files": [
