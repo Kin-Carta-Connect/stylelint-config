@@ -79,15 +79,18 @@ The `<type>` and `<description>` fields are mandatory, the `(<scope>)` field is 
 
 Must be one of the following:
 
-- **build**: Changes that affect the build system or external dependencies (example scopes: gulp, npm)
-- **chore**: Changes that do not affect the build system (example scopes: npm, dependencies)
-- **ci**: Changes to our CI configuration files and scripts (example scopes: GHActions, Circle, BrowserStack)
-- **docs**: Documentation only changes
 - **feat**: A new feature
+- **feature**: A new feature
 - **fix**: A bug fix
 - **perf**: A code change that improves performance
+- **revert**: A revert
+- **docs**: Documentation only changes
+- **style**: Style changes
+- **chore**: Changes that do not affect the build system (example scopes: npm, dependencies)
 - **refactor**: A code change that neither fixes a bug nor adds a feature
 - **test**: Adding missing tests or correcting existing tests
+- **build**: Changes that affect the build system or external dependencies (example scopes: gulp, npm)
+- **ci**: Changes to our CI configuration files and scripts (example scopes: GHActions, Circle, BrowserStack)
 
 ##### Scope
 
@@ -177,11 +180,18 @@ This reverts commit 667ecc1654a317a13331b17617d973392f415f02.
 
 Release triggers are:
 
-- Commits with a breaking change will be associated with a major release.
-- Commits with type 'feat' will be associated with a minor release.
-- Commits with type 'fix' will be associated with a patch release.
-- Commits with type 'perf' will be associated with a patch release.
-- Commits with scope no-release will not be associated with a release type even if they have a breaking change or the type 'feat', 'fix' or 'perf'.
+- Commits with a `breaking change` will be associated with a **major** release.
+- Commits with type `feat` will be associated with a **minor** release.
+- Commits with type `fix` will be associated with a **patch** release.
+- Commits with type `perf` will be associated with a **patch** release.
+- Commits with type `build` will be associted with a **patch** release.
+- Commits with type `ci` will be associted with a **patch** release.
+- Commits with type `chore` will be associted with a **patch** release.
+- Commits with type `docs` will be associted with a **patch** release.
+- Commits with type `refactor` will be associted with a **patch** release.
+- Commits with type `style` will be associted with a **patch** release.
+- Commits with type `test` will be associted with a **patch** release.
+- Commits with scope `no-release` will not be associated with a release type even if they have a breaking change or the type `feat`, `fix` or `perf`.
 
 ## 2. `release-notes-generator` - generate changelog content with conventional-changelog
 
